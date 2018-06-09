@@ -1,0 +1,140 @@
+@import "colors";
+
+atom-text-editor {
+   // Text color
+   color: @light-gray;
+
+   // Indent guide, wrap guide line color
+   .indent-guide, .wrap-guide {
+      color: @very-light-gray;
+   }
+
+   // Gutter colors
+   .gutter {
+      .line-number {
+         color: @white;
+
+         &.cursor-line {
+            background-color: lighten(@easy-blue, 10%);
+            color: @very-light-gray;
+         }
+         &.cursor-line-no-selection {
+            color: @very-light-gray;
+         }
+         &.folded, &::after {
+            color: @white, 5%;
+         }
+      }
+   }
+
+   // Cursor color
+   .cursor {
+      color: lighten(@light-blue, 9%);
+   }
+
+   // Selection color
+   .selection .region {
+      background-color: lighten(@easy-blue, 19%);
+   }
+
+   // Syntax comment coloring
+   .syntax--comment {
+      color: lighten(@green, 4%);
+   }
+
+   // Syntax constant coloring
+   .syntax--constant {
+      &.syntax--numeric {
+         color: darken(@orange, 4%);
+      }
+      &.syntax--character {
+         color: lighten(@light-blue, 13%);
+      }
+      &.syntax--language {
+         color: lighten(@purple, 5%);
+      }
+   }
+
+   // Syntax variable coloring
+   .syntax--variable {
+      &.syntax--parameter {
+         color: lighten(@red, 4%);
+      }
+      &.syntax--language {
+         color: @keyword-flow-color;
+      }
+      &.syntax--other {
+         color: lighten(@red, 8%);;
+      }
+   }
+
+   // Syntax keyword coloring
+   .syntax--keyword {
+      &.syntax--control {
+         color: darken(@keyword-flow-color, 16%);
+      }
+      &.syntax--operator {
+         color: @light-blue;
+      }
+   }
+
+   // Syntax storage coloring (public, int, static, final, etc...)
+   .syntax--storage {
+      &.syntax--type {
+         color: @keyword-flow-color;
+      }
+      &.syntax--modifier {
+         color: @keyword-color;
+      }
+   }
+
+   // Syntax support coloring
+   .syntax--support {
+      &.syntax--function {
+         color: lighten(@bright-blue, 12%);
+      }
+      &.syntax--class {
+         color: darken(@bright-blue, 12%);
+      }
+      &.syntax--type {
+         color: lighten(@orange, 6%);
+      }
+      &.syntax--constant {
+         color: lighten(@yellow, 9%);
+      }
+      &.syntax--variable {
+         color: @bright-blue;
+      }
+   }
+
+   // Syntax entity coloring
+   .syntax--entity {
+      &.syntax--name {
+         &.syntax--function {
+            color: @blue;
+         }
+         &.syntax--type {
+            color: lighten(@yellow, 8%);
+            font-weight: bold;
+         }
+         &.syntax--tag, &.syntax--section {
+            color: lighten(@green, 31%);
+            font-weight: bold;
+         }
+      }
+
+      &.syntax--other {
+         &.syntax--inherited-class {
+            color: lighten(@orange, 8%);
+            font-weight: bold;
+         }
+      }
+   }
+
+   // Syntax string coloring
+   .syntax--string {
+      &.syntax--quoted {
+         color: darken(@light-green, 17%);
+      }
+   }
+}

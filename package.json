@@ -1,0 +1,20 @@
+{
+  "name": "melatonin-syntax",
+  "theme": "syntax",
+  "version": "0.1.0",
+  "description": "A clean and succint syntax for programmers who prefer to code late at night.",
+  "keywords": [
+    "syntax",
+    "theme",
+    "sleepy",
+    "melatonin",
+    "sleep",
+    "night",
+    "dark"
+  ],
+  "repository": "https://github.com/atom/melatonin-syntax",
+  "license": "MIT",
+  "engines": {
+    "atom": ">=1.0.0 <2.0.0"
+  }
+}
